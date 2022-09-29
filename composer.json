@@ -1,0 +1,25 @@
+{
+    "name": "knplabs/php-json-schema-bundle",
+    "description": "A Symfony bundle for knplabs/php-json-schema",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Knp\\JsonSchemaBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KnpLabs",
+            "email": "hello@knplabs.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "knplabs/php-json-schema": ">=0.0.2",
+        "zircote/swagger-php": ">=4.4",
+        "symfony/http-kernel": ">=6.0",
+        "symfony/dependency-injection": ">=6.0",
+        "symfony/config": "^6.1"
+    }
+}
