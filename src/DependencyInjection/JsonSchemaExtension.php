@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Knp\JsonSchemaBundle\DependencyInjection;
 
+use Knp\JsonSchema\JsonSchemaInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
@@ -19,5 +20,10 @@ class JsonSchemaExtension extends Extension
         );
 
         $loader->load('services.xml');
+
+        $container
+            ->registerForAutoconfiguration(JsonSchemaInterface::class)
+            ->addTag('knp.json_schema')
+        ;
     }
 }

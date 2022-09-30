@@ -20,6 +20,6 @@
         "zircote/swagger-php": ">=4.4",
         "symfony/http-kernel": ">=6.0",
         "symfony/dependency-injection": ">=6.0",
-        "symfony/config": "^6.1"
+        "symfony/config": ">=6.0"
     }
 }
