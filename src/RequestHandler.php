@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Knp\JsonSchemaBundle;
 
 use Knp\JsonSchema\Collection;
+use Knp\JsonSchema\JsonSchemaInterface;
 use Knp\JsonSchema\Validator;
 use Knp\JsonSchemaBundle\Exception\JsonSchemaException;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,7 +30,7 @@ class RequestHandler
     /**
      * @template T
      *
-     * @param class-string<JsonSchema<T>> $schemaClass
+     * @param class-string<JsonSchemaInterface<T>> $schemaClass
      *
      * @return T
      */
