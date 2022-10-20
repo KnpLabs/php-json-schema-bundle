@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=8.0",
-        "knplabs/php-json-schema": ">=0.0.4-alpha1",
+        "knplabs/php-json-schema": ">=0.0.4-alpha2",
         "zircote/swagger-php": ">=4.4",
         "symfony/http-kernel": ">=6.0",
         "symfony/dependency-injection": ">=6.0",
