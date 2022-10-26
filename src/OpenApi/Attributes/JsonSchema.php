@@ -30,10 +30,10 @@ class JsonSchema extends Schema
         $this->required = $jsonSchema['required'] ?? false;
         $this->additionalProperties = $jsonSchema['additionalProperties'] ?? true;
 
-        $this->properties = array_map(function ($name, $property) {
+        $this->properties = array_map(function ($name, array $property) {
             if (\array_key_exists('oneOf', $property)) {
                 $property['oneOf'] = array_map(
-                    fn ($schema) => new Schema($schema),
+                    fn (object $schema) => new Schema($schema),
                     $property['oneOf']
                 );
             }

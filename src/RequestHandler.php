@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Knp\JsonSchemaBundle;
 
 use Knp\JsonSchema\Collection;
+use Knp\JsonSchema\JsonSchemaInterface;
 use Knp\JsonSchema\Validator;
 use Knp\JsonSchemaBundle\Exception\JsonSchemaException;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,16 +21,21 @@ class RequestHandler
         'application/json;charset=utf-8',
     ];
 
+    private Collection $schemas;
+    private Validator $validator;
+
     public function __construct(
-        private readonly Collection $schemas,
-        private readonly Validator $validator
+        Collection $schemas,
+        Validator $validator
     ) {
+        $this->schemas = $schemas;
+        $this->validator = $validator;
     }
 
     /**
      * @template T
      *
-     * @param class-string<JsonSchema<T>> $schemaClass
+     * @param class-string<JsonSchemaInterface<T>> $schemaClass
      *
      * @return T
      */

@@ -10,7 +10,7 @@ use OpenApi\Annotations\Schema;
 class JsonSchema extends Schema
 {
     /**
-     * @var array<string>
+     * @var array<mixed>
      */
     public static $_required = ['schema'];
 
@@ -34,10 +34,10 @@ class JsonSchema extends Schema
         $this->required = $jsonSchema['required'] ?? false;
         $this->additionalProperties = $jsonSchema['additionalProperties'] ?? true;
 
-        $this->properties = array_map(function ($name, $property) {
+        $this->properties = array_map(function ($name, array $property) {
             if (\array_key_exists('oneOf', $property)) {
                 $property['oneOf'] = array_map(
-                    fn ($schema) => new Schema($schema),
+                    fn (array $schema) => new Schema($schema),
                     $property['oneOf']
                 );
             }
