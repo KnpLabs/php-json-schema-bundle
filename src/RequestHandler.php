@@ -21,10 +21,15 @@ class RequestHandler
         'application/json;charset=utf-8',
     ];
 
+    private Collection $schemas;
+    private Validator $validator;
+
     public function __construct(
-        private readonly Collection $schemas,
-        private readonly Validator $validator
+        Collection $schemas,
+        Validator $validator
     ) {
+        $this->schemas = $schemas;
+        $this->validator = $validator;
     }
 
     /**
