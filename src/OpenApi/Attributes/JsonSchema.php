@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle\OpenApi\Attributes;
+namespace KnpLabs\JsonSchemaBundle\OpenApi\Attributes;
 
 use OpenApi\Attributes\Property;
 use OpenApi\Attributes\Schema;
-use OpenApi\Generator;
 
 class JsonSchema extends Schema
 {

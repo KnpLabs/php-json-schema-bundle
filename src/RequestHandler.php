@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle;
+namespace KnpLabs\JsonSchemaBundle;
 
-use Knp\JsonSchema\Collection;
-use Knp\JsonSchema\JsonSchemaInterface;
-use Knp\JsonSchema\Validator;
-use Knp\JsonSchemaBundle\Exception\JsonSchemaException;
+use KnpLabs\JsonSchema\Collection;
+use KnpLabs\JsonSchema\JsonSchemaInterface;
+use KnpLabs\JsonSchema\Validator;
+use KnpLabs\JsonSchemaBundle\Exception\JsonSchemaException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\UnsupportedMediaTypeHttpException;
 

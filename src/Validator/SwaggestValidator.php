@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle\Validator;
+namespace KnpLabs\JsonSchemaBundle\Validator;
 
-use Knp\JsonSchema\JsonSchemaInterface;
-use Knp\JsonSchema\Validator;
-use Knp\JsonSchema\Validator\Errors;
-use Knp\JsonSchema\Validator\Error as KnpJsonSchemaError;
+use KnpLabs\JsonSchema\JsonSchemaInterface;
+use KnpLabs\JsonSchema\Validator;
+use KnpLabs\JsonSchema\Validator\Errors;
+use KnpLabs\JsonSchema\Validator\Error as KnpJsonSchemaError;
 use Swaggest\JsonSchema\Exception\Error;
 use Swaggest\JsonSchema\Exception\LogicException;
 use Swaggest\JsonSchema\InvalidValue;
