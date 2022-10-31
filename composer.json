@@ -6,7 +6,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Knp\\JsonSchemaBundle\\": "src/"
+            "KnpLabs\\JsonSchemaBundle\\": "src/"
         }
     },
     "authors": [
@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=8.0",
-        "knplabs/php-json-schema": ">=0.0.4",
+        "knplabs/php-json-schema": "~0.1.0",
         "zircote/swagger-php": ">=4.4",
         "symfony/http-kernel": ">=6.0",
         "symfony/dependency-injection": ">=6.0",

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle;
+namespace KnpLabs\JsonSchemaBundle;
 
-use Knp\JsonSchemaBundle\DependencyInjection\JsonSchemaExtension;
+use KnpLabs\JsonSchemaBundle\DependencyInjection\JsonSchemaExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 

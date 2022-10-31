@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle\DependencyInjection;
+namespace KnpLabs\JsonSchemaBundle\DependencyInjection;
 
-use Knp\JsonSchema\JsonSchemaInterface;
+use KnpLabs\JsonSchema\JsonSchemaInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;

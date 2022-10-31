@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle\OpenApi\Annotation;
+namespace KnpLabs\JsonSchemaBundle\OpenApi\Annotation;
 
 use OpenApi\Annotations\Property;
 use OpenApi\Annotations\Schema;

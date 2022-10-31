@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Knp\JsonSchemaBundle\Exception;
+namespace KnpLabs\JsonSchemaBundle\Exception;
 
-use Knp\JsonSchema\Validator\Errors;
+use KnpLabs\JsonSchema\Validator\Errors;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class JsonSchemaException extends BadRequestHttpException
