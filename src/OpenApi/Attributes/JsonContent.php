@@ -18,10 +18,11 @@ class JsonContent extends AttributesJsonContent
          * @var JsonSchemaInterface
          */
         $schema = new $schemaClass();
+        $examples = iterator_to_array($schema->getExamples());
 
         parent::__construct(
                 schema: json_encode($schema->jsonSerialize()),
-                example: iterator_to_array($schema->getExamples()),
+                example: array_shift($examples),
                 title: $schema->getTitle(),
                 description: $schema->getDescription(),
         );
