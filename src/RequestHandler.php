@@ -19,6 +19,7 @@ class RequestHandler
     private const CONTENT_TYPES = [
         'application/json',
         'application/json;charset=utf-8',
+        'application/x-www-form-urlencoded',
     ];
 
     private Collection $schemas;
@@ -53,11 +54,11 @@ class RequestHandler
             );
         }
 
-        /** @var string */
-        $content = $request->getContent(false);
-
         /** @var T */
-        $data = json_decode($content, true, flags: JSON_THROW_ON_ERROR);
+        $data = match ($mediaType) {
+            'application/x-www-form-urlencoded' => $request->request->all(),
+            default => json_decode((string) $request->getContent(false), true, flags: JSON_THROW_ON_ERROR),
+        };
 
         $errors = $this->validator->validate($data, $this->schemas->get($schemaClass));
 
