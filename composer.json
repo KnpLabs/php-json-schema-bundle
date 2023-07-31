@@ -22,7 +22,8 @@
         "symfony/http-kernel": ">=6.0",
         "symfony/dependency-injection": ">=6.0",
         "symfony/config": ">=6.0",
-        "swaggest/json-schema": ">=0.12.41"
+        "swaggest/json-schema": ">=0.12.41",
+        "opis/json-schema": "^2.3"
     },
     "require-dev": {
         "vimeo/psalm": "5.x-dev"
