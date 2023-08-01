@@ -14,12 +14,21 @@ class JsonSchemaExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container): void
     {
+        $configuration = new Configuration();
+
+        $config = $this->processConfiguration($configuration, $configs);
+
         $loader = new PhpFileLoader(
             $container,
             new FileLocator(__DIR__ . '/../../config')
         );
 
         $loader->load('services.php');
+
+        $container->setAlias(
+            'KnpLabs\JsonSchema\Validator',
+            sprintf('KnpLabs\\JsonSchemaBundle\\Validator\\%s', $config['validator'])
+        );
 
         $container
             ->registerForAutoconfiguration(JsonSchemaInterface::class)
